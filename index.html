@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elite Coffee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h2>☕🙂 Tevada Coffee</h2>
+        <div class="nav-buttons">
+            <button>Account</button>
+            <button>History</button>
+            <button>Cart (<span id="cart-count">0</span>)</button>
+        </div>
+    </div>
+
+    <!-- Banner -->
+    <div class="banner">
+        <h1>Premium Coffee Experience</h1>
+        <p>Order Tevada Coffee and Enjoy ☕</p>
+    </div>
+
+    <!-- Menu -->
+    <h2 class="menu-title">Our Menu</h2>
+
+    <div class="menu">
+        <div class="item" onclick="addToCart('Espresso')">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
+            <p>Espresso</p>
+        </div>
+
+        <div class="item" onclick="addToCart('Latte')">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+            <p>Latte</p>
+        </div>
+
+        <div class="item" onclick="addToCart('Cappuccino')">
+            <img src="https://images.unsplash.com/photo-1534778101976-62847782c213">
+            <p>Cappuccino</p>
+        </div>
+
+        <div class="item" onclick="addToCart('Hot Latte')">
+            <img src="https://images.unsplash.com/photo-1503240778100-fd245e17a273">
+            <p>Hot Latte</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        let cartCount = 0;
+
+        function addToCart(itemName) {
+            cartCount++;
+            document.getElementById("cart-count").innerText = cartCount;
+            alert(itemName + " added to cart ☕");
+        }
+    </script>
+
+</body>
+</html>
